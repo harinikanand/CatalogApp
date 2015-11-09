@@ -1,0 +1,54 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+
+<div id="book_store_title" class="center-content clear-fix">
+	<h1>Awesome Book Store</h1>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+		<ul>
+			{% for message in messages %}
+					<li><strong>{{message}}</strong></li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	{% endwith %}
+</div>
+
+
+<div id="list_genres">
+
+{% for i in genres %}
+
+	<div id="genre_details">
+
+		<a href='{{url_for('displayGenre',genre_id=i.id)}}'> {{i.name}}</a>
+		<br>
+		<div id="edit_delete">
+			<div id="edit">
+				<a href='{{url_for('editGenre',genre_id=i.id)}}'>Edit</a>
+			</div>
+			<div id="delete">
+				<a href='{{url_for('deleteGenre',genre_id=i.id)}}'>Delete</a>
+			</div>
+		</div>
+		<br>
+	</div>
+
+{% endfor %}
+
+	<div id="newbutton">
+		<button type="button" class="btn" onclick="location.href='/genres/new';">Add a new genre</button>
+		<button type="home" class="btn" onClick="location.href='/genres/';"> Home </button>
+		<button type="home" class="btn" onClick="location.href='/gdisconnect';"> SignOut </button>
+	</div>
+
+</div>
+
+</body>
+
+</html>

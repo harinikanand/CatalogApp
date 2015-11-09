@@ -1,0 +1,25 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+<div id="title">
+	<h1> Edit the Genre name </h1>
+	<h3> <B><i>current genre name:</i></B> {{genre_name}} </h3>
+</div>
+
+<div id="form_input">
+	<form action="{{url_for('editGenre',genre_id=genre_id)}}" method = 'POST'>
+		<p>Provide a new name for the genre:</p>
+		<input type='text' size='50' name='name'>
+		<input type='submit' value='Submit'>
+	</form>
+</div>
+<div id="newbutton" class="center-content clear-fix">
+	<button type="home" class="btn" onClick="location.href='/genres/';"> Home </button>
+	<button type="home" class="btn" onClick="location.href='/gdisconnect';"> SignOut </button>
+</div>
+</body
+</html>

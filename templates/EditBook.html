@@ -1,0 +1,36 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+<div id="title">
+	<h1> Edit a book under a genre </h1>
+	<h3> <B><i>Title of the book before editing: </i></B> {{book_title}} </h3>
+	<h3> <B><i> Note: You can alter one or more fields, fields left empty are populated from previous values </i><B></h3>
+</div>
+
+<div id="form_input">
+	<form action="{{url_for('editBook',genre_id=genre_id,book_id=book_id)}}" method = 'POST'>
+		<p>Enter details of the book:</p>
+		<h3><i> Book title: </i></h3>
+		<input type='text' size='50' name='book_title'>
+		<h3><i> Author(s): </i></h3>
+		<input type='text' size='250' id="bigbox" name='author'>
+		<h3><i> Description: </i></h3>
+		<input type='text' size='1000' id="bigbox" name='description'>
+		<h3><i> Price: </i></h3>
+		<input type='text' size='8' name='price'>
+		<br>
+		<br>
+		<input type='submit' value='Submit'>
+	</form>
+</div>
+
+<div id="newbutton" class="center-content clear-fix">
+	<button type="home" class="btn" onClick="location.href='/genres/';"> Home </button>
+	<button type="home" class="btn" onClick="location.href='/gdisconnect';"> SignOut </button>
+</div>
+</body
+</html>

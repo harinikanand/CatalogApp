@@ -1,0 +1,56 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+
+<div id="genre_title" class="center-content clear-fix">
+	<h1>{{genre_title}}</h1>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+		<ul>
+			{% for message in messages %}
+					<li><strong>{{message}}</strong></li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	{% endwith %}
+</div>
+
+
+<div id="list_books">
+
+{% for i in books %}
+
+	<div id="book_details">
+
+		<p> <B><i>Name:</i></B>  {{i.name}} </p>
+		<p> <B><i>Author:</i></B> {{i.author}} </p>
+		<p> <B><i>Description:</i></B> {{i.description}} </p>
+		<p> <B><i>Price:</i></B> {{i.price}} </p>
+		<div id="edit_delete">
+			<div id="edit">
+				<a href='{{url_for('editBook',genre_id=genre_id,book_id=i.id)}}'>Edit</a>
+			</div>
+			<div id="delete">
+				<a href='{{url_for('deleteBook',genre_id=genre_id,book_id=i.id)}}'>Delete</a>
+			</div>
+		</div>
+		<br>
+	</div>
+
+{% endfor %}
+
+	<div id="newbutton">
+		<button type="button" class="btn" onclick="location.href='/genres/{{genre_id}}/list/new';">Add a new title</button>
+		<button type="home" class="btn" onClick="location.href='/genres/';"> Home </button>
+		<button type="home" class="btn" onClick="location.href='/gdisconnect';"> SignOut </button>
+	</div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+html {
+  background: url(5496507286_0dfd267fc0.JPG) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: scroll;
+}
+
+#book_store_title, #genre_title {
+  background-color: hsla(225, 90%, 27%, 0.87);
+  margin-left: 25%;
+  margin-right: 25%;
+  color: rgba(194, 195, 195, 0.77);
+  text-align: center;
+  font-family: "Times New Roman", Georgia, Serif;
+  font-size: 40px;
+  font-style: italic;
+}
+
+
+#list_genres, #list_books {
+  background-color:  rgba(74, 41, 52, 0.68);
+  margin-left: 25%;
+  margin-right: 25%;
+  color: hsla(225, 90%, 27%, 0.87);
+  text-align: center;
+}
+
+#genre_details {
+  background-color: rgba(194, 195, 195, 0.77);
+  margin-left: 30%;
+  margin-right: 30%;
+  color: hsla(225, 90%, 27%, 0.87);
+  text-align: center;
+  font-family: "Times New Roman", Georgia, Serif;
+  font-size: 30px;
+}
+
+.center-content {
+  padding: 2.5% 5%;
+  text-align: center;
+}
+
+.clear-fix {
+  overflow: auto;
+}
+
+#edit_delete {
+  padding: 20px;
+  margin: 0;
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+}
+
+#edit {
+  float: left;
+}
+
+#delete {
+  float: right;
+}
+
+#newbutton {
+  padding: 20px;
+}
+
+.btn {
+  background: hsla(225, 90%, 27%, 0.87);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: rgba(194, 195, 195, 0.77);
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  font-style: italic;
+}
+
+#form_input {
+  background-color: rgba(194, 195, 195, 0.77);
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-bottom: 2%;
+  color: hsla(225, 90%, 27%, 0.87);
+  text-align: center;
+  font-family: "Times New Roman", Georgia, Serif;
+  font-size: 30px;
+
+}
+
+#title {
+  background-color: hsla(225, 90%, 27%, 0.87);
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 10px;
+  color: rgba(194, 195, 195, 0.77);
+  text-align: center;
+  font-family: "Times New Roman", Georgia, Serif;
+  font-size: 15px;
+  font-style: italic;
+}
+
+ul {
+  color: white;
+  text-align: center;
+  font-family: "Times New Roman", Georgia, Serif;
+  font-style: italic;
+  font-size: 30px;
+}
+
+#genre_title {
+  background-color: hsla(225, 90%, 27%, 0.87);
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 0;
+  color: rgba(194, 195, 195, 0.77);
+  text-align: center;
+  font-family: "Times New Roman", Georgia, Serif;
+  font-size: 20px;
+  font-style: italic;
+}
+
+#list_books {
+  background-color:  rgba(74, 41, 52, 0.68);
+  margin-left: 5%;
+  margin-right: 5%;
+  color: hsla(225, 90%, 27%, 0.87);
+  text-align: center;
+}
+
+#book_details {
+  background-color: rgba(194, 195, 195, 0.77);
+  margin:0;
+  color: hsla(225, 90%, 27%, 0.87);
+  text-align: center;
+  font-family: "Times New Roman", Georgia, Serif;
+  font-size: 30px;
+}
+
+#bigbox {
+  width: 500px;
+}
+
+#signInButton {
+  background-color: hsla(225, 6%, 15%, 0.05);
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 0;
+  text-align: center;
+}
+
+#signInInstructions {
+  background-color: rgba(187, 187, 186, 0.77);
+  margin-left: 5%;
+  margin-right: 5%;
+  color: hsla(225, 90%, 27%, 0.87);
+  text-align: center;
+}

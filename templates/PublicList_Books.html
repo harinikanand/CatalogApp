@@ -1,0 +1,47 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+
+<div id="genre_title" class="center-content clear-fix">
+	<h1>{{genre_title}}</h1>
+	<h5><i>Creator Name: {{creator_name}}</i></h5>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+		<ul>
+			{% for message in messages %}
+					<li><strong>{{message}}</strong></li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	{% endwith %}
+</div>
+
+
+<div id="list_books">
+
+{% for i in books %}
+
+	<div id="book_details">
+
+		<p> <B><i>Name:</i></B>  {{i.name}} </p>
+		<p> <B><i>Author:</i></B> {{i.author}} </p>
+		<p> <B><i>Description:</i></B> {{i.description}} </p>
+		<p> <B><i>Price:</i></B> {{i.price}} </p>
+		<br>
+	</div>
+
+{% endfor %}
+
+	<div id="newbutton">
+		<button type="home" class="btn" onClick="location.href='/genres/';"> Home </button>
+	</div>
+
+</div>
+
+</body>
+
+</html>
